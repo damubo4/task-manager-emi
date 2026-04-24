@@ -1,0 +1,119 @@
+{
+  "tasks": [
+    {
+      "title": "Nueva tarea",
+      "description": "descripcion para la nueva tarea",
+      "dueDate": "2026-04-23",
+      "completed": false,
+      "stateHistory": [
+        {
+          "state": "new",
+          "date": "2026-04-23"
+        }
+      ],
+      "notes": [
+        "Nota para la nueva tarea"
+      ],
+      "id": "T1YaOKYSnxk"
+    },
+    {
+      "title": "sadc",
+      "description": "asdc",
+      "dueDate": "2026-04-11",
+      "completed": false,
+      "stateHistory": [
+        {
+          "state": "active",
+          "date": "2026-04-23"
+        }
+      ],
+      "notes": [
+        "asdc"
+      ],
+      "id": "qZj3VzifBm8"
+    },
+    {
+      "title": "sbg",
+      "description": "cgb g",
+      "dueDate": "2026-04-29",
+      "completed": false,
+      "stateHistory": [
+        {
+          "state": "new",
+          "date": "2026-04-23"
+        }
+      ],
+      "notes": [
+        "dfv"
+      ],
+      "id": "iF8kjbcEl-Y"
+    },
+    {
+      "title": "qertwet",
+      "description": "ertyety",
+      "dueDate": "2026-04-25",
+      "completed": false,
+      "stateHistory": [
+        {
+          "state": "new",
+          "date": "2026-04-23"
+        }
+      ],
+      "notes": [
+        "etyety"
+      ],
+      "id": "oT7IkGZO0To"
+    },
+    {
+      "title": "zxcv",
+      "description": "zxcv",
+      "dueDate": "2026-04-25",
+      "completed": false,
+      "stateHistory": [
+        {
+          "state": "closed",
+          "date": "2026-04-23"
+        }
+      ],
+      "notes": [
+        "zxcvzxcv"
+      ],
+      "id": "XCuyMQYYcu4"
+    },
+    {
+      "title": "zxcvzcv",
+      "description": "dfghdfghdgfghfd",
+      "dueDate": "2026-04-03",
+      "completed": false,
+      "stateHistory": [
+        {
+          "state": "resolved",
+          "date": "2026-04-23"
+        }
+      ],
+      "notes": [
+        "dfgdgb"
+      ],
+      "id": "8ZQTUXYp9HA"
+    }
+  ],
+  "states": [
+    {
+      "name": "new",
+      "id": "f68b"
+    },
+    {
+      "name": "active",
+      "id": "e92b"
+    },
+    {
+      "name": "resolved",
+      "id": "d03e"
+    },
+    {
+      "name": "closed",
+      "id": "58ae"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

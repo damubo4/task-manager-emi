@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Applications/DAVID/Challenge Emi Group/**)",
+      "Bash(textutil -convert txt -stdout \"Reto_Codigo_EMI-Frontend.docx\")",
+      "Bash(python3 -c ' *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'OK - {len\\(d\\)} tasks'\\)\")",
+      "Bash(npm start *)"
+    ]
+  }
+}

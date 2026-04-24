@@ -1,0 +1,119 @@
+<div class="page">
+  <div class="form-container">
+    <header class="form-header">
+      <button class="btn-back" (click)="onCancel()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Back
+      </button>
+      <h1>{{ isEditMode() ? 'Edit Task' : 'New Task' }}</h1>
+    </header>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="task-form" novalidate>
+
+      <div class="form-group">
+        <label for="title">Title <span class="required">*</span></label>
+        <input
+          id="title"
+          type="text"
+          formControlName="title"
+          placeholder="What needs to be done?"
+          [class.invalid]="form.get('title')?.invalid && form.get('title')?.touched"
+        />
+        @if (form.get('title')?.invalid && form.get('title')?.touched) {
+          <span class="error-msg">Title is required (minimum 3 characters)</span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          formControlName="description"
+          rows="3"
+          placeholder="Add more details..."
+        ></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dueDate">Due Date <span class="required">*</span></label>
+          <input
+            id="dueDate"
+            type="date"
+            formControlName="dueDate"
+            [class.invalid]="form.get('dueDate')?.invalid && form.get('dueDate')?.touched"
+          />
+          @if (form.get('dueDate')?.invalid && form.get('dueDate')?.touched) {
+            <span class="error-msg">Due date is required</span>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="state">State</label>
+          <select id="state" formControlName="state">
+            @for (s of states(); track s.id) {
+              <option [value]="s.name">{{ s.name }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group form-group--checkbox">
+        <label class="checkbox-label">
+          <input type="checkbox" formControlName="completed" />
+          <span>Mark as completed</span>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <div class="notes-header">
+          <label>
+            Notes
+            <span class="hint">(at least one required)</span>
+          </label>
+          <button type="button" class="btn btn-secondary btn-sm" (click)="addNote()">
+            + Add Note
+          </button>
+        </div>
+
+        @if (notesArray.invalid && notesArray.touched) {
+          <span class="error-msg">At least one note with content is required</span>
+        }
+
+        <div formArrayName="notes" class="notes-array">
+          @for (control of notesArray.controls; track $index; let i = $index) {
+            <div class="note-row">
+              <input
+                type="text"
+                [formControlName]="i"
+                [placeholder]="'Note ' + (i + 1)"
+              />
+              @if (notesArray.length > 1) {
+                <button type="button" class="btn-remove-note" (click)="removeNote(i)" title="Remove note">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                  </svg>
+                </button>
+              }
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+        <button type="submit" class="btn btn-primary" [disabled]="isSubmitting()">
+          @if (isSubmitting()) {
+            <span class="btn-spinner"></span>
+            Saving...
+          } @else {
+            {{ isEditMode() ? 'Update Task' : 'Create Task' }}
+          }
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
