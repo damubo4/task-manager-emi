@@ -1,100 +1,130 @@
 {
   "tasks": [
     {
-      "title": "Nueva tarea",
-      "description": "descripcion para la nueva tarea",
-      "dueDate": "2026-04-23",
+      "id": "1",
+      "title": "Complete Project Proposal",
+      "description": "Prepare and submit the project proposal for approval.",
+      "dueDate": "2023-12-15",
       "completed": false,
       "stateHistory": [
         {
           "state": "new",
-          "date": "2026-04-23"
-        }
-      ],
-      "notes": [
-        "Nota para la nueva tarea"
-      ],
-      "id": "T1YaOKYSnxk"
-    },
-    {
-      "title": "sadc",
-      "description": "asdc",
-      "dueDate": "2026-04-11",
-      "completed": false,
-      "stateHistory": [
+          "date": "2023-12-01"
+        },
         {
           "state": "active",
-          "date": "2026-04-23"
+          "date": "2023-12-05"
         }
       ],
       "notes": [
-        "asdc"
-      ],
-      "id": "qZj3VzifBm8"
+        "Check proposal guidelines",
+        "Include budget estimates"
+      ]
     },
     {
-      "title": "sbg",
-      "description": "cgb g",
-      "dueDate": "2026-04-29",
+      "id": "2",
+      "title": "Design Wireframes",
+      "description": "Create wireframes for the user interface.",
+      "dueDate": "2023-12-20",
       "completed": false,
       "stateHistory": [
         {
           "state": "new",
-          "date": "2026-04-23"
+          "date": "2023-12-02"
+        },
+        {
+          "state": "active",
+          "date": "2023-12-06"
         }
       ],
       "notes": [
-        "dfv"
-      ],
-      "id": "iF8kjbcEl-Y"
+        "Review design patterns",
+        "Seek feedback from the team"
+      ]
     },
     {
-      "title": "qertwet",
-      "description": "ertyety",
-      "dueDate": "2026-04-25",
+      "id": "3",
+      "title": "Implement User Authentication",
+      "description": "Develop user authentication functionality.",
+      "dueDate": "2023-12-25",
       "completed": false,
       "stateHistory": [
         {
           "state": "new",
-          "date": "2026-04-23"
+          "date": "2023-12-03"
+        },
+        {
+          "state": "active",
+          "date": "2023-12-07"
         }
       ],
       "notes": [
-        "etyety"
-      ],
-      "id": "oT7IkGZO0To"
+        "Research secure authentication methods",
+        "Implement password hashing"
+      ]
     },
     {
-      "title": "zxcv",
-      "description": "zxcv",
-      "dueDate": "2026-04-25",
+      "id": "4",
+      "title": "Write API Documentation",
+      "description": "Document the RESTful API for external developers.",
+      "dueDate": "2023-12-30",
       "completed": false,
       "stateHistory": [
         {
-          "state": "closed",
-          "date": "2026-04-23"
+          "state": "new",
+          "date": "2023-12-04"
+        },
+        {
+          "state": "active",
+          "date": "2023-12-08"
         }
       ],
       "notes": [
-        "zxcvzxcv"
-      ],
-      "id": "XCuyMQYYcu4"
+        "Use Swagger/OpenAPI for documentation",
+        "Provide clear examples"
+      ]
     },
     {
-      "title": "zxcvzcv",
-      "description": "dfghdfghdgfghfd",
-      "dueDate": "2026-04-03",
+      "id": "5",
+      "title": "Bug Fixes and Testing",
+      "description": "Address reported bugs and perform thorough testing.",
+      "dueDate": "2024-01-05",
       "completed": false,
       "stateHistory": [
         {
-          "state": "resolved",
-          "date": "2026-04-23"
+          "state": "new",
+          "date": "2023-12-05"
+        },
+        {
+          "state": "active",
+          "date": "2023-12-09"
         }
       ],
       "notes": [
-        "dfgdgb"
+        "Create test cases for critical scenarios",
+        "Perform regression testing"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Project Deployment",
+      "description": "Prepare for and deploy the project to production.",
+      "dueDate": "2024-01-10",
+      "completed": false,
+      "stateHistory": [
+        {
+          "state": "new",
+          "date": "2023-12-06"
+        },
+        {
+          "state": "active",
+          "date": "2023-12-10"
+        }
       ],
-      "id": "8ZQTUXYp9HA"
+      "notes": [
+        "Coordinate with DevOps for deployment",
+        "Monitor performance after deployment"
+      ]
     }
   ],
   "states": [
@@ -114,6 +144,5 @@
       "name": "closed",
       "id": "58ae"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
